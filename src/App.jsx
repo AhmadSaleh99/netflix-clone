@@ -5,11 +5,11 @@ import "./App.css";
 import HomeScreen from "./pages/HomeScreen";
 import LoginScreen from "./pages/LoginScreen";
 import { auth } from "./Firebase";
-import { useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 
 function App() {
-  const user = useSelector(selectUser);
+  const user = useSelector(selectUser, shallowEqual);
 
   const dispatch = useDispatch();
   console.log(user);

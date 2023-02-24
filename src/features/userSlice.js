@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   user: null,
-  status: "idle",
+  // status: "idle",
 };
 
 export const userSlice = createSlice({
@@ -22,6 +22,6 @@ export const userSlice = createSlice({
 
 export const { login, logout } = userSlice.actions;
 
-export const selectUser = (state) => state.counter;
+export const selectUser = (state) => state.counter.user;
 
 export default userSlice.reducer;

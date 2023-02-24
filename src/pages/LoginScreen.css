@@ -1,0 +1,89 @@
+/* * {
+  border: 1px solid #e50914;
+} */
+.loginScreen {
+  position: relative;
+  height: 100%;
+  /* height: 100vh; */
+  background: url("https://mebincdn.themebin.com/1664271579476.jpg") center
+    no-repeat;
+  background-size: cover;
+}
+.loginScreen__gradiant {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+.loginScreen__logo {
+  position: fixed;
+  left: 0;
+  padding-left: 20px;
+  width: 150px;
+  object-fit: contain;
+}
+.loginScreen__button {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  background-color: #e50914;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+/* ########################## */
+
+.loginScreen__body {
+  z-index: 1;
+  position: absolute;
+  top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  left: 0;
+  right: 0;
+}
+.loginScreen__body > h1 {
+  font-size: 3.125rem;
+  margin-bottom: 20px;
+}
+.loginScreen__body > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.loginScreen__body > h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.loginScreen__input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+}
+.loginScreen__getStarted {
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.loginScreen__input {
+  margin: 20px;
+}

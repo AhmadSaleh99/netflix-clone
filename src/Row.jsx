@@ -21,7 +21,7 @@ const Row = ({ title, fetchUrl, isLarge = false }) => {
       <h2>{title}</h2>
       <div className="row__posters">
         {movies?.map((movie) => (
-          <div className="movie_card">
+          <div className="movie_card" key={movie.id}>
             <img
               className={`row__poster ${isLarge && "row__posterLarge"}`}
               key={movie.id}
@@ -30,7 +30,7 @@ const Row = ({ title, fetchUrl, isLarge = false }) => {
               }`}
               alt={movie.name}
             />
-            <div className="movie_details">
+            <div className={`movie_details ${isLarge && "movie_detailsLarge"}`}>
               <p className="movie_name" key={movie.id}>
                 {`Movie: ${
                   movie?.original_name || movie?.name || movie?.title

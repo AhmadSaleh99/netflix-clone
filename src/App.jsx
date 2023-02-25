@@ -5,12 +5,13 @@ import "./App.css";
 import HomeScreen from "./pages/HomeScreen";
 import LoginScreen from "./pages/LoginScreen";
 import { auth } from "./Firebase";
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import ProfileScreen from "./pages/ProfileScreen";
 
 function App() {
-  const user = useSelector(selectUser, shallowEqual);
+  // const user = useSelector(selectUser, shallowEqual);
+  const user = useSelector(selectUser);
 
   const dispatch = useDispatch();
 
@@ -24,11 +25,11 @@ function App() {
           })
         );
       } else {
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return unSibscribe;
-  });
+  }, [dispatch]);
 
   return (
     <div className="app">

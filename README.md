@@ -1,4 +1,4 @@
-#Build and Deploy a React movies website using Tmdb api, Redux and Firebase authentication.
+##Build and Deploy a React movies website using Tmdb api, Redux and Firebase authentication.
 
 ## Welcome! 
 Thanks for checking out this Application.
